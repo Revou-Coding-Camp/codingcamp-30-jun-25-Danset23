@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page 4 - Welcome Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 20px;
+    }
+    nav button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    .welcome {
+      padding: 20px;
+    }
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-color: #eee;
+      text-align: center;
+      line-height: 300px;
+      color: #999;
+      font-size: 20px;
+    }
+    .headquarter {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .locations {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .circle {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #aaa;
+      border-radius: 50%;
+      margin: 0 auto 10px auto;
+    }
+
+    .message-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    .message-form {
+      max-width: 400px;
+    }
+
+    .message-form input,
+    .message-form textarea {
+      width: 100%;
+      margin: 6px 0;
+      padding: 8px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+
+    .message-form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .gender-options {
+      margin-top: 5px;
+    }
+
+    .message-form button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+    }
+
+    .output-box {
+      border: 1px solid #888;
+      padding: 15px;
+      width: 300px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #444;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><img src="https://via.placeholder.com/40" alt="Logo"></div>
+  <nav>
+    <button onclick="location.href='index.html'" type="button">Halaman 1</button>
+    <button onclick="location.href='page2.html'" type="button">Halaman 2</button>
+    <button onclick="location.href='page3.html'" type="button">Halaman 3</button>
+    <button onclick="location.href='page4.html'" type="button">Halaman 4</button>
+  </nav>
+</header>
+
+<section class="welcome">
+  <h2>Hi Harfi, Welcome To Website</h2>
+  <p>Ini adalah website latihan pertama</p>
+</section>
+
+<div class="banner">1386x578</div>
+
+<section class="headquarter">
+  <h3>Our Headquarter</h3>
+  <div class="locations">
+    <div>
+      <div class="circle"></div>
+      <p>Jakarta</p>
+    </div>
+    <div>
+      <div class="circle"></div>
+      <p>Bandung</p>
+    </div>
+    <div>
+      <div class="circle"></div>
+      <p>Surabaya</p>
+    </div>
+  </div>
+</section>
+
+<section class="message-section">
+  <div class="message-form">
+    <h4>Message Us</h4>
+    <form>
+      <label>Nama :</label>
+      <input type="text" placeholder="Nama">
+      
+      <label>Tanggal Lahir :</label>
+      <input type="date" value="2024-04-02">
+      
+      <label>Jenis Kelamin :</label>
+      <div class="gender-options">
+        <input type="radio" name="gender" id="male" checked>
+        <label for="male">Laki-Laki</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Perempuan</label>
+      </div>
+      
+      <label>Pesan :</label>
+      <textarea rows="4" placeholder="Pesan"></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="output-box">
+    <p><strong>Current time:</strong> Fri Jun 17 2022 11:27:28 GMT+0100</p>
+    <p><strong>Nama:</strong> Harfi Novian</p>
+    <p><strong>Tanggal Lahir:</strong> 01/11/1985</p>
+    <p><strong>Jenis Kelamin:</strong> Laki - Laki</p>
+    <p><strong>Pesan:</strong> Lagi Belajar buat Website</p>
+  </div>
+</section>
+
+<footer>
+  Created By RevoU
+</footer>
+
+</body>
+</html>

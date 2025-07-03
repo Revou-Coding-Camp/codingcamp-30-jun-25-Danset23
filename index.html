@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyWebsite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    nav button {
+      margin-left: 10px;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    form {
+      width: 45%;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 50%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+    .delete-btn {
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><img src="https://picsum.photos/200" alt="Logo" /></div>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='page2.html'">Halaman 2</button>
+      <button onclick="location.href='page3.html'">Halaman 3</button>
+      <button onclick="location.href='page4.html'">Halaman 4</button>
+      <button>Daniel Profile</button>
+      <button>Portofolio</button>
+      <button>Message Us</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form id="formBelajar">
+      <h2>Form Belajar</h2>
+      <p>Ini adalah website latihan pertama</p>
+      <label>Nama:</label><br />
+      <input type="text" id="nama" required /><br />
+
+      <label>Tanggal Lahir:</label><br />
+      <input type="date" id="tglLahir" required /><br />
+
+      <label>Jenis Kelamin:</label><br />
+      <input type="radio" name="gender" value="Laki-Laki" checked /> Laki-Laki
+      <input type="radio" name="gender" value="Perempuan" /> Perempuan<br /><br />
+
+      <label>Pesan:</label><br />
+      <textarea id="pesan" rows="3"></textarea><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Tanggal Lahir</th>
+          <th>Jenis Kelamin</th>
+          <th>Pesan</th>
+          <th>Profile</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="dataTable">
+        <tr>
+          <td>Ada Lovelace</td>
+          <td>December 10, 1815</td>
+          <td>Perempuan</td>
+          <td>Belajar Buat Website</td>
+          <td><a href="#">Klik Disini</a></td>
+          <td><span class="delete-btn">🗑️</span></td>
+        </tr>
+        <tr>
+          <td>Grace Hopper</td>
+          <td>December 9, 1906</td>
+          <td>Perempuan</td>
+          <td>Hello World</td>
+          <td><a href="#">Klik Disini</a></td>
+          <td><span class="delete-btn">🗑️</span></td>
+        </tr>
+        <tr>
+          <td>Margaret Hamilton</td>
+          <td>August 17, 1936</td>
+          <td>Perempuan</td>
+          <td>Test Dulu</td>
+          <td><a href="#">Klik Disini</a></td>
+          <td><span class="delete-btn">🗑️</span></td>
+        </tr>
+        <tr>
+          <td>Joan Clarke</td>
+          <td>June 24, 1917</td>
+          <td>Laki-Laki</td>
+          <td>Selalu Semangat</td>
+          <td><a href="#">Klik Disini</a></td>
+          <td><span class="delete-btn">🗑️</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">Created by RevoU</div>
+
+  <script>
+    document.getElementById("formBelajar").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const tgl = document.getElementById("tglLahir").value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const pesan = document.getElementById("pesan").value;
+
+      const tbody = document.getElementById("dataTable");
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${nama}</td>
+        <td>${new Date(tgl).toDateString()}</td>
+        <td>${gender}</td>
+        <td>${pesan}</td>
+        <td><a href="#">Klik Disini</a></td>
+        <td><span class="delete-btn">🗑️</span></td>
+      `;
+      tbody.appendChild(row);
+
+      // Reset form
+      document.getElementById("formBelajar").reset();
+    });
+
+    document.getElementById("dataTable").addEventListener("click", function(e) {
+      if (e.target.classList.contains("delete-btn")) {
+        e.target.closest("tr").remove();
+      }
+    });
+  </script>
+</body>
+</html>

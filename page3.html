@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Groceries Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header nav button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border: 1px solid #000;
+      background: white;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .subtext {
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-box, .form-box {
+      width: 300px;
+      background: #f7f7f7;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .image-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial {
+      font-style: italic;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .form-box input, .form-box select {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1e1e1e;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .features {
+      padding: 40px 60px;
+      text-align: center;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+    }
+
+    .package-section {
+      background-color: #f1f4f8;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .package {
+      padding: 20px;
+    }
+
+    .package h3 {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .cta button {
+      padding: 12px 30px;
+      font-size: 16px;
+      background: #1e1e1e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><strong>moqups</strong></div>
+  <nav>
+    <button onclick="location.href='index.html'" type="button">Halaman 1</button>
+    <button onclick="location.href='page2.html'" type="button">Halaman 2</button>
+    <button onclick="location.href='page3.html'" type="button">Halaman 3</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Top Rated E-Groceries Shop in Indonesian</h1>
+  <p class="subtext">Every Day with best ingredients</p>
+
+  <div class="content">
+    <div class="image-box">
+      <div style="width: 100%; height: 150px; background-color: #ddd;"></div>
+      <p class="testimonial">"setiap hari beli sayur buah yang fresh disini"</p>
+      <p><strong>Florence Hughes</strong><br/><small>Ibu Rumah Tangga, 28</small></p>
+    </div>
+
+    <div class="form-box">
+      <h3>Contact Us</h3>
+      <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</p>
+      <input type="text" placeholder="First and last name" />
+      <input type="email" placeholder="example@email.com" />
+      <select>
+        <option>Select option</option>
+        <option>Sayuran</option>
+        <option>Buah</option>
+      </select>
+      <button>SEND</button>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <p>Use this space to provide users with more information about your offer.</p>
+  <ul>
+    <li>1. Your first feature, written in the form of a benefit statement.</li>
+    <li>2. Your second feature, written in the form of a benefit statement.</li>
+    <li>3. Your third feature, written in the form of a benefit statement.</li>
+  </ul>
+</section>
+
+<section class="package-section">
+  <h2>Our Package</h2>
+  <div class="packages">
+    <div class="package">
+      <h3>🥬 Fresh Vegetable</h3>
+      <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+    </div>
+    <div class="package">
+      <h3>🍎 Fresh Fruit</h3>
+      <p>Buah dengan kualitas terbaik dari local atau import dan harga yang menarik</p>
+    </div>
+    <div class="package">
+      <h3>🚚 Instant Delivery</h3>
+      <p>Dikirim instan oleh kurir yang telah di training dengan SOP untuk menjaga kondisi belanja kamu</p>
+    </div>
+    <div class="package">
+      <h3>⭐ Kitchen Ingredient</h3>
+      <p>Bumbu dapur lengkap untuk keperluan memasak kamu</p>
+    </div>
+    <div class="package">
+      <h3>⭐ Kitchen Set</h3>
+      <p>Segala jenis alat masak untuk membantu kamu memasak</p>
+    </div>
+    <div class="package">
+      <h3>⭐ Bundling Set</h3>
+      <p>Bingung masak apa? sudah tersedia paket untuk kamu masak di dapur mu</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Your Closing Argument Headline</h2>
+  <p>
+    Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed justo quis, 
+    convallis tincidunt risus. Phasellus fringilla odio vel erat fringilla,
+  </p>
+  <button>CALL TO ACTION</button>
+</section>
+
+<footer>
+  <p><strong>moqups</strong><br/>
+    Terms of Service &nbsp;&nbsp; Privacy Policy <br/>
+    © 2019 Moqups
+  </p>
+</footer>
+
+</body>
+</html>
